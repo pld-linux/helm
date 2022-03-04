@@ -69,9 +69,11 @@ ZSH completion for helm command line.
 %{__mv} %{name}-%{vendor_version}/vendor .
 
 %build
-ldflags="-X helm.sh/helm/v3/internal/version.version=%{version} \
+ldflags="\
+	-X helm.sh/helm/v3/internal/version.version=%{version} \
 	-X helm.sh/helm/v3/internal/version.metadata= \
-	-X helm.sh/helm/v3/internal/version.gitCommit="
+	-X helm.sh/helm/v3/internal/version.gitCommit= \
+"
 %__go build -v -mod=vendor -ldflags="$ldflags" -o target/helm ./cmd/helm
 
 %install
