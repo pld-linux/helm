@@ -1,15 +1,15 @@
-%define		vendor_version	3.8.0
+%define		vendor_version	3.9.0
 
 Summary:	The Kubernetes Package Manager
 Name:		helm
-Version:	3.8.0
+Version:	3.9.0
 Release:	1
 License:	Apache v2.0
 Group:		Applications
 Source0:	https://github.com/helm/helm/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	d43c494dbee78d5c01a90ec1a279dadd
+# Source0-md5:	b1d13b6f0dcc04a4142673963d02cf56
 Source1:	%{name}-vendor-%{vendor_version}.tar.xz
-# Source1-md5:	309b30ebc576e26d471dc049c7c8dfd3
+# Source1-md5:	8684380701fb8a0a43d3d2870a940b79
 URL:		https://helm.sh/
 BuildRequires:	golang >= 1.16
 BuildRequires:	rpm-build >= 4.6
